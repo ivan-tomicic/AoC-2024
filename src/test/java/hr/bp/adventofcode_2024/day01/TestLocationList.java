@@ -2,6 +2,7 @@ package hr.bp.adventofcode_2024.day01;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import static hr.bp.adventofcode_2024.Utils.readInputForDay;
 
 public class TestLocationList {
 
@@ -11,6 +12,18 @@ public class TestLocationList {
         LocationList locationList = new LocationList(input);
 
         long expectedSumOfDistances = 11;
+
+        long actualSumOfDistances = locationList.getSumOfDistances();
+
+        Assertions.assertEquals(expectedSumOfDistances, actualSumOfDistances);
+    }
+
+    @Test
+    public void testCalculatingDistances_givenTaskInput_returnsCorrectSumOfDistances() {
+        String input = readInputForDay("day01");
+        LocationList locationList = new LocationList(input);
+
+        long expectedSumOfDistances = 936063;
 
         long actualSumOfDistances = locationList.getSumOfDistances();
 
