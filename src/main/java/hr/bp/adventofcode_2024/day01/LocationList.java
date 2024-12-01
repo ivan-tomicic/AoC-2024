@@ -1,7 +1,11 @@
 package hr.bp.adventofcode_2024.day01;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
@@ -31,5 +35,15 @@ public class LocationList {
                 .mapToObj(i -> Math.abs(listOne.get(i) - listTwo.get(i)))
                 .toList().stream().mapToLong(Long::valueOf)
                 .reduce(Long::sum).getAsLong();
+    }
+
+    public long getSimilarityScore() {
+        Long similarityScore = 0L;
+
+        for (Integer number : listOne) {
+            similarityScore += (long) number * Collections.frequency(listTwo, number);
+        }
+
+        return similarityScore;
     }
 }
