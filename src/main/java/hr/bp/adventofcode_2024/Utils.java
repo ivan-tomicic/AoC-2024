@@ -45,7 +45,7 @@ public class Utils {
     }
 
     public static String readInputForDay(String day) {
-        String filePath = "src/main/java/hr/bp/adventofcode/" + day + "/input.txt";
+        String filePath = "src/main/java/hr/bp/adventofcode_2024/" + day + "/input.txt";
 
         try {
             return Files.readString(Paths.get(filePath));
