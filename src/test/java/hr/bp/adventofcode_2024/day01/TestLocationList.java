@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static hr.bp.adventofcode_2024.Utils.readInputForDay;
 
+/**
+ * @author Ivan Tomičić
+ */
 public class TestLocationList {
 
     @Test

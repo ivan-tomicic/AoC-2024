@@ -1,5 +1,8 @@
 package hr.bp.adventofcode_2024.day01;
 
+/**
+ * @author Ivan Tomičić
+ */
 public class TestUtils {
 
     public static String inputOne() {

@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
+/**
+ * @author Ivan Tomičić
+ */
 public class LocationList {
     
     private final List<Integer> listOne = new ArrayList<>();
