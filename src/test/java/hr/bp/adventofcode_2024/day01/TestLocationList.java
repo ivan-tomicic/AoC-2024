@@ -41,4 +41,16 @@ public class TestLocationList {
 
         Assertions.assertEquals(expectedSumOfDistances, actualSumOfDistances);
     }
+
+    @Test
+    public void testCalculatingSimilarityScore_givenTaskInput_returnsCorrectSimilarityScore() {
+        String input = readInputForDay("day01");
+        LocationList locationList = new LocationList(input);
+
+        long expectedSumOfDistances = 23150395;
+
+        long actualSumOfDistances = locationList.getSimilarityScore();
+
+        Assertions.assertEquals(expectedSumOfDistances, actualSumOfDistances);
+    }
 }
