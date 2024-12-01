@@ -7,9 +7,9 @@ import java.util.stream.IntStream;
 
 public class LocationList {
     
-    private List<Integer> listOne = new ArrayList<>();
+    private final List<Integer> listOne = new ArrayList<>();
     
-    private List<Integer> listTwo = new ArrayList<>();
+    private final List<Integer> listTwo = new ArrayList<>();
     
     public LocationList(String input) {
         for (String line : input.split("\\n")) {
@@ -33,7 +33,7 @@ public class LocationList {
     }
 
     public long getSimilarityScore() {
-        Long similarityScore = 0L;
+        long similarityScore = 0L;
 
         for (Integer number : listOne) {
             similarityScore += (long) number * Collections.frequency(listTwo, number);
